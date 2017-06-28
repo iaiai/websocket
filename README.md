@@ -120,5 +120,3 @@ ws.onerror = function () {
 };
 ```
 因为目前我们这种方式会一直重连如果没连接上或者断连的话，如果有两个设备同时登陆并且会踢另一端下线，一定要发送一个踢下线的消息类型，这边接收到这种类型的消息，逻辑判断后就不再执行reconnect，否则会出现一只相互挤下线的死循环。
-
-[整理了一个简单的demo到github，点击查看https://github.com/zimv/WebSocketHeartBeat](https://github.com/zimv/WebSocketHeartBeat)
